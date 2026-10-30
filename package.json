@@ -1,0 +1,23 @@
+{
+  "name": "closer-market",
+  "version": "0.1.0",
+  "description": "Closer Market - WhatsApp voice interpreter for multilingual market trade",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "start": "node --env-file=.env src/server.js",
+    "dev": "node --env-file=.env --watch src/server.js",
+    "stats": "node scripts/stats.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "naijalingo": "^0.3.0"
+  },
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  }
+}

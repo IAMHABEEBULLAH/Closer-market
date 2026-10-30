@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: closer-market
+    runtime: docker
+    healthCheckPath: /health
+    plan: starter
+    disk:
+      name: closer-market-data
+      mountPath: /app/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: DATA_DIR
+        value: /app/data
+      - key: PUBLIC_BASE_URL
+        sync: false
+      - key: WHATSAPP_TOKEN
+        sync: false
+      - key: WHATSAPP_PHONE_NUMBER_ID
+        sync: false
+      - key: WHATSAPP_VERIFY_TOKEN
+        generateValue: true
+      - key: WHATSAPP_APP_SECRET
+        sync: false
+      - key: NAIJALINGO_API_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: ALLOWED_NUMBERS
+        sync: false
+      - key: WARMUP_MINUTES
+        value: 0
